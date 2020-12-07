@@ -19,7 +19,6 @@ export class HomePage extends Component {
           position.coords.latitude,
           position.coords.longitude
         ).then((data) => {
-          console.log(data);
           this.props.weatherLoaded(data);
         });
       })
