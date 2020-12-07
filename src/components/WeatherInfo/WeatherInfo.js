@@ -23,11 +23,12 @@ const WeatherInfo = ({ weatherData }) => {
           alt={flag}
           src={`https://purecatamphetamine.github.io/country-flag-icons/1x1/${flag}.svg`}
         />
-        <span style={{ fontSize: "26px", verticalAlign: "middle" }}>
+        <span style={{ fontSize: "24px", verticalAlign: "middle" }}>
           {location}
         </span>
       </p>
       <img
+        className="weather-info__image"
         src={`https://openweathermap.org/img/wn/${icon}@2x.png`}
         alt="weather_icon"
       />
