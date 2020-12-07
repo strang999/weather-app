@@ -1,10 +1,28 @@
 .container {
     text-align: center;
+    max-width: 500px !important;
+}
+.select__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 .select {
-    padding: 10px;
-    margin: 5px;
+    padding: 8px;
+    margin: 8px;
     border-radius: 10px;
     outline: none;
-    width: 50vw;
+    width: 40vw;
+    max-width: 250px;
+}
+
+@media (max-width: 360px) {
+    .select__container {
+        flex-wrap: nowrap;
+    }
+    .select {
+        padding: 5px;
+        margin: 5px;
+    }
 }

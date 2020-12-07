@@ -47,19 +47,21 @@ export class HomePage extends Component {
         <Container>
           <WeatherInfo weatherData={this.props.weatherData} />
           <hr />
-          <CountryDropdown
-            className="select"
-            value={country}
-            onChange={(val) => this.props.selectCountry(val)}
-          />
-          <br></br>
-          <RegionDropdown
-            className="select"
-            country={country}
-            value={region}
-            onChange={(val) => this.props.selectRegion(val)}
-          />
-          <br></br>
+          <div className="select__container">
+            <CountryDropdown
+              className="select"
+              value={country}
+              onChange={(val) => this.props.selectCountry(val)}
+            />
+
+            <RegionDropdown
+              className="select"
+              country={country}
+              value={region}
+              onChange={(val) => this.props.selectRegion(val)}
+            />
+          </div>
+
           <Button style={{ margin: "5px" }}>
             <Link to={`/city/${region}`}>
               {region
