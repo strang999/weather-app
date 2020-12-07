@@ -2,6 +2,9 @@
     text-align: center;
     max-width: 500px !important;
 }
+.ui.vertical.animated.button {
+    margin: 5px;
+}
 .select__container {
     display: flex;
     justify-content: center;
@@ -17,7 +20,12 @@
     max-width: 250px;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 414px) {
+    .container {
+        p {
+            margin-bottom: 0.5em;
+        }
+    }
     .select__container {
         flex-wrap: nowrap;
     }
