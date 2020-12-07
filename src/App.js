@@ -1,6 +1,6 @@
 import "./App.scss";
 import HomePage from "./components/HomePage/HomePage";
-import { Route, Switch } from "react-router-dom";
+import { Redirect, Route, Switch } from "react-router-dom";
 import Particles from "react-particles-js";
 import SelectedLocationPage from "./components/SelectedLocation/SelectedLocationPage";
 import { Header, Icon } from "semantic-ui-react";
@@ -25,10 +25,10 @@ const App = () => {
               enable: false,
             },
             number: {
-              value: 160,
+              value: 40,
             },
             size: {
-              value: 4,
+              value: 6,
             },
             move: {
               direction: "bottom",
@@ -47,6 +47,7 @@ const App = () => {
         <Route path="/city/:id">
           <SelectedLocationPage />
         </Route>
+        <Redirect to="/" />
       </Switch>
     </div>
   );

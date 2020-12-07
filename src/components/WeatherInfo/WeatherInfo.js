@@ -21,7 +21,7 @@ const WeatherInfo = ({ weatherData }) => {
         <Image
           avatar
           alt={flag}
-          src={`http://purecatamphetamine.github.io/country-flag-icons/1x1/${flag}.svg`}
+          src={`https://purecatamphetamine.github.io/country-flag-icons/1x1/${flag}.svg`}
         />
         <span style={{ fontSize: "26px", verticalAlign: "middle" }}>
           {location}
