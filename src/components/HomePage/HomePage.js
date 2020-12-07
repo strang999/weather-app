@@ -19,11 +19,17 @@ export class HomePage extends Component {
           position.coords.latitude,
           position.coords.longitude
         ).then((data) => {
+          console.log(data);
           this.props.weatherLoaded(data);
         });
       })
       .catch((err) => {
-        console.log(err.message);
+        WeatherService.getWeather(50.48, 30.43).then((data) => {
+          this.props.weatherLoaded(data);
+        });
+        alert(
+          "You have disabled location service. Allow Weather app to access your location. Your current location will be used for calculating Real time weather."
+        );
         this.props.weatherDataError();
       });
   }
