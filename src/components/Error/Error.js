@@ -1,13 +1,27 @@
 import React from "react";
-import { Header, Icon } from "semantic-ui-react";
-import "./Error.scss";
-const Error = () => {
+import { Button, Container, Header, Icon } from "semantic-ui-react";
+
+const Error = (props) => {
   return (
-    <div className="error">
-      <Header as="h1" icon textAlign="center">
-        <Icon name="dont" circular />
-        <Header.Content>Error... Something went wrong</Header.Content>
-      </Header>
+    <div>
+      <Container>
+        <Header as="h1" icon textAlign="center">
+          <Icon name="dont" circular />
+          <Header.Content>
+            Error. Seems like no data about this region...
+          </Header.Content>
+        </Header>
+        <Button
+          animated="vertical"
+          position="center"
+          onClick={() => props.history.push("/")}
+        >
+          <Button.Content visible>Back</Button.Content>
+          <Button.Content hidden>
+            <Icon name="arrow left" />
+          </Button.Content>
+        </Button>
+      </Container>
     </div>
   );
 };

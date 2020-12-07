@@ -1,6 +1,5 @@
 import "./App.scss";
 import HomePage from "./components/HomePage/HomePage";
-import WithWeatherService from "./components/hoc/WithWeatherService";
 import { Route, Switch } from "react-router-dom";
 import Particles from "react-particles-js";
 import SelectedLocationPage from "./components/SelectedLocation/SelectedLocationPage";
@@ -8,7 +7,7 @@ import { Header, Icon } from "semantic-ui-react";
 
 const App = () => {
   return (
-    <div className="App">
+    <div className="app">
       <Particles
         id="particles"
         style={{

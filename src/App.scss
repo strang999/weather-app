@@ -1,50 +1,12 @@
-.body {
+.app {
     height: 100vh;
-    color: green;
-    padding: 30px;
-    overflow-y: overlay;
-
-    &::-webkit-scrollbar {
-        display: none;
-    }
-    /* The image used */
-    background-image: url("https://24tv.ua/resources/photos/news/1200x675_DIR/202010/1446740.jpg?202010090846");
-
-    /* Add the blur effect */
-    filter: blur(8px);
-    -webkit-filter: blur(8px);
-
-    /* Full height */
-    height: 100%;
-
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: -100;
+    color: black;
+    text-shadow: 2px 2px 2px gray;
 }
-.App {
-    height: 100vh;
-    color: green;
-    padding: 30px;
-    overflow-y: hidden;
-
-    &::-webkit-scrollbar {
-        display: none;
-    }
-    /* The image used */
-    background-image: url("https://24tv.ua/resources/photos/news/1200x675_DIR/202010/1446740.jpg?202010090846");
-    z-index: -100;
-    /* Add the blur effect */
-
-    /* Full height */
-
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.ui.container {
+    background-color: rgba(207, 203, 202, 0.3);
 }
 h2.ui.icon.center.aligned.header.header {
     margin-top: 0 !important;
-    padding: 20px;
+    padding: 10px;
 }

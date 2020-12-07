@@ -1,6 +1,5 @@
 const initialState = {
   loading: true,
-  errorMessage: null,
   country: "",
   region: "",
   lat: undefined,
@@ -22,12 +21,12 @@ const initialState = {
 };
 
 const reducer = (state = initialState, action) => {
-  console.log(state);
   switch (action.type) {
     case "WEATHER_DATA_LOADED":
       return {
         ...state,
         loading: false,
+        error: false,
         weatherData: {
           location: action.payload.name,
           temperatureC: action.payload.main.temp,
@@ -37,8 +36,8 @@ const reducer = (state = initialState, action) => {
           pressure: action.payload.main.pressure,
           description: action.payload.weather[0].main,
           feelsLike: action.payload.main.feels_like,
-          tempMax: Math.round(action.payload.main.temp_max),
-          tempMin: Math.round(action.payload.main.temp_min),
+          tempMax: action.payload.main.temp_max,
+          tempMin: action.payload.main.temp_min,
           flag: action.payload.sys.country,
         },
       };
