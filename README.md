@@ -1,4 +1,4 @@
-Weather app completed with React+Redux
+Weather app completed with React, Redux, Semantic UI React, React router, OpenWeatherAPI
 
 # Getting Started with Create React App
 
